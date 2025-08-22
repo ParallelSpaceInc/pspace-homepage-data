@@ -35,6 +35,9 @@ jobs:
       - name: Fetch data from URLs
         run: python scripts/fetch_data.py
 
+      - name: Create index page
+        run: python scripts/create_index.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
