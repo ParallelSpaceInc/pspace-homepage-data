@@ -1,0 +1,39 @@
+name: Fetch Data from URLs
+
+on:
+  schedule:
+    # 매 10분마다 실행
+    - cron: "*/10 * * * *"
+  workflow_dispatch: # 수동 실행 가능
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/fetch-data.yml"
+
+jobs:
+  fetch-and-convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch data from URLs
+        run: python scripts/fetch_data.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./data
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "Auto-update data"
