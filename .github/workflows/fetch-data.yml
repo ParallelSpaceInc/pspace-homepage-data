@@ -11,6 +11,11 @@ on:
       - "scripts/**"
       - ".github/workflows/fetch-data.yml"
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   fetch-and-convert:
     runs-on: ubuntu-latest
