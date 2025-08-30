@@ -12,8 +12,8 @@ import requests
 
 # URL 설정
 DATA_URLS = {
-    "news": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnu1bPUlNtlcV4SsVbuK7I9UQs84CPc01ls_-aa_IBIJcOmLRNpxQQo0pivMfHlsJtHq0yRy9_ZQ00/pub?gid=0&single=true&output=csv",
-    "events": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnu1bPUlNtlcV4SsVbuK7I9UQs84CPc01ls_-aa_IBIJcOmLRNpxQQo0pivMfHlsJtHq0yRy9_ZQ00/pub?gid=1567101976&single=true&output=csv",
+    "news": "https://docs.google.com/spreadsheets/d/e/2PACX-1vREc_BHd3Mwee4ot1oZMedVj9a0fAlb2wX--HNKcrFJyMBkOfoZKxIeVqys6lncvohjwaXsadh6x8Co/pub?gid=0&single=true&output=csv",
+    "events": "https://docs.google.com/spreadsheets/d/e/2PACX-1vREc_BHd3Mwee4ot1oZMedVj9a0fAlb2wX--HNKcrFJyMBkOfoZKxIeVqys6lncvohjwaXsadh6x8Co/pub?gid=1567101976&single=true&output=csv",
 }
 
 # 공통 세션 생성
